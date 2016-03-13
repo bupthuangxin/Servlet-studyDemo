@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MyInitServlet1</servlet-name>
+    <servlet-class>com.hsp.servlet.MyInitServlet1</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServletConfigTest</servlet-name>
+    <servlet-class>com.hsp.servlet.ServletConfigTest</servlet-class>
+    <init-param>
+    <!-- 这里可以给servlet配置信息，只能被该servlet读取 -->
+    <param-name>encoding</param-name>
+    <param-value>utf-8</param-value>
+    </init-param>
+    <init-param>
+    <param-name>vision</param-name>
+    <param-value>1.0</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RequestTest</servlet-name>
+    <servlet-class>com.hsp.servlet.RequestTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Error</servlet-name>
+    <servlet-class>com.hsp.servlet.Error</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Download</servlet-name>
+    <servlet-class>com.hsp.servlet.Download</servlet-class>
+  </servlet>
+
+
+
+ 
+ <!-- 这里可以被所有servlet读取 -->
+ <!--  
+<context-param>
+<param-name></param-name>
+<param-value></param-value>
+</context-param>
+-->
+
+
+  <servlet-mapping>
+    <servlet-name>ServletConfigTest</servlet-name>
+    <url-pattern>/ServletConfigTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RequestTest</servlet-name>
+    <url-pattern>/RequestTest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Error</servlet-name>
+    <url-pattern>/Error</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Download</servlet-name>
+    <url-pattern>/Download</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
